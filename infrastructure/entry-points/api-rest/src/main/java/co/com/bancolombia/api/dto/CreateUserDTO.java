@@ -1,0 +1,4 @@
+package co.com.bancolombia.api.dto;
+
+public record CreateUserDTO(String name, String lastName, Integer age, Integer idType, Long idNumber) {
+}
