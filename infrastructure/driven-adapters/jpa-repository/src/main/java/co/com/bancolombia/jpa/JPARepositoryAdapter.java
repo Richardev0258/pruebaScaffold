@@ -37,7 +37,7 @@ public class JPARepositoryAdapter extends AdapterOperations<User, UserEntity, Bi
     @Override
     public User editUser(User user) {
         UserEntity savedUser = repository.findByIdNumber(user.getIdNumber()).orElseThrow(UserNotFoundException::new);
-        UserEntity editedUser = new UserEntity(savedUser.getId(), user.getName(), user.getLastname(), user.getAge(), user.getIdType(), user.getIdNumber());
+        UserEntity editedUser = new UserEntity(savedUser.getId(), user.getName(), user.getLastName(), user.getAge(), user.getIdType(), user.getIdNumber());
         return toEntity(repository.save(editedUser));
     }
 

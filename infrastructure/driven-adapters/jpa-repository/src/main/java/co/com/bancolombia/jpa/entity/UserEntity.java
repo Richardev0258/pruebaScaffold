@@ -21,7 +21,7 @@ public class UserEntity {
 
     private String name;
 
-    private String lastname;
+    private String lastName;
 
     private Integer age;
 
